@@ -1,0 +1,75 @@
+.links-sidebar {
+  background-color: $white;
+  border-radius: 4px;
+  max-width: 261px;
+
+  @include media-breakpoint-down(md) {
+    max-width: none;
+    margin-left: 25px;
+    margin-right: 25px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  @include media-breakpoint-down(xs) {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  & > div:not(:last-child) {
+    border-bottom: 1px solid $neutral-200;
+  }
+
+  .sidebar-header {
+    padding: 12px 0 11px 16px;
+
+    .title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 21px;
+      margin-bottom: 0;
+    }
+  }
+
+  .sidebar-section {
+    padding: 16px 12px 22px;
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      margin-bottom: 14px;
+
+      font-size: 12px;
+      font-weight: 500;
+      line-height: 16px;
+      text-transform: uppercase;
+      letter-spacing: 0.02em;
+
+      svg {
+        width: 16px;
+        height: 16px;
+        margin-right: 8px;
+      }
+    }
+
+    .section-links {
+      display: flex;
+      flex-direction: column;
+
+      a {
+        margin-left: 24px;
+        color: $link-500;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 18px;
+
+        &:not(:last-child) {
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}

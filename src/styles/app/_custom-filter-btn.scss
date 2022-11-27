@@ -1,0 +1,65 @@
+.custom-filter-group {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 12px;
+
+  .btn.custom-filter-btn {
+    display: flex;
+    align-items: center;
+
+    z-index: auto;
+    flex-grow: 0;
+    padding: 7px 12px !important;
+    border: 1px solid #E9EAEA;
+    border-radius: 4px !important;
+    white-space: nowrap;
+  
+    color: $neutral-700;
+    font-size: 14px;
+    line-height: 16px;
+    transition-duration: 0.3s;
+    background-color: $white;
+  
+    @include media-breakpoint-down(sm) {
+      font-size: 12px;
+    }
+
+    span.count-badge {
+      display: block;
+      padding: 2px 4px;
+      margin-left: 8px;
+      border-radius: 10px;
+      background-color: $neutral-200;
+      color: $neutral-500;
+
+      font-size: 12px;
+      line-height: 14px;
+    }
+    
+    &:not(.disabled):hover, &:focus {
+      box-shadow: none;
+      background-color: $primary-100;
+      color: $primary;
+
+      span.count-badge {
+        background-color: $primary-200;
+        color: $primary-500;
+        transition: all 0.15s ease-in-out;
+      }
+    }
+  
+    &.active:not(:disabled), &:not(.disabled):active  {
+      box-shadow: none;
+      background-color: $primary-100;
+      border: 1px solid $primary-500;
+      color: $primary-500;
+
+      span.count-badge {
+        background-color: $primary-200;
+        color: $primary-500;
+      }
+    }
+  }
+}

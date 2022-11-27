@@ -1,0 +1,23 @@
+@import 'intake';
+
+.logo-form {
+  .logo-container {
+    position: relative;
+    width: fit-content;
+
+    &.loading {
+      pointer-events: none;
+    }
+
+    .org-logo-preloader {
+      position: absolute;
+      top: 42%;
+      left: 42%;
+      
+      svg {
+        color: black;
+        font-size: 32px;
+      }
+    }
+  }
+}

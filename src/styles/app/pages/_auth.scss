@@ -1,0 +1,197 @@
+.auth-page {
+  position: relative;
+  min-height: calc(100vh - 198px);
+  width: 100%;
+  background-image: url(./../../../img/backgrounds/bg-park.webp);
+  background-size: 100%;
+  background-position: 30% -138px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  @include media-breakpoint-down(xs) {
+    min-height: calc(100vh - 233px);
+  }
+
+  &::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparentize($gray-900, $amount: 0.2);
+  }
+
+  .form-card-container {
+    padding: 20px 0;
+    height: 100%;
+    width: 100%;
+
+    .share-info {
+      margin-top: 21px;
+      color: $neutral-500;
+      font-family: "Roboto", sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 140%;
+      text-align: center
+    }
+
+    .form-group {
+      &.auth-toggle {
+        .custom-btn-group {
+          display: block;
+
+          &.btn-group {
+            display: flex !important;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 100%;
+            padding: 4px;
+            background: $neutral-100;
+            border-radius: 4px;
+            column-gap: 4px;
+
+            @include media-breakpoint-down(xs) {
+              flex-direction: column;
+              gap: 4px 0;
+            }
+
+            .custom-button {
+              display: flex;
+              flex-direction: row;
+              justify-content: center;
+              align-items: center;
+              padding: 10px 37px 10px 36px;
+              background: $neutral-100;
+              border-color: transparent !important;
+              border-radius: 4px;
+              color: $neutral-black;
+
+              span {
+                font-weight:400;
+                size: 14px;
+                line-height: 18.23px
+              }
+
+              &.active {
+                z-index: 999;
+                box-shadow: 0 2px 8px -2px rgba(24, 39, 75, 0.07), 0 4px 8px -2px rgba(24, 39, 75, 0.03) !important;
+                background: $neutral !important;
+                color: $primary-500 !important;
+                overflow: visible;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .headline {
+      margin-bottom: 12px !important;
+      color: $neutral-black;
+      font-family: "DM Sans", sans-serif !important;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 130%;
+    }
+
+    .info-label {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 140%;
+    }
+
+    .card {
+      border: 0;
+      border-radius: 6px;
+
+      .card-header {
+        border-radius: 0;
+      }
+    }
+
+    .auth-form {
+      position: relative;
+      z-index: 3;
+      max-width: 538px;
+      margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto;
+
+      .password-container {
+        position: relative;
+      
+        a {
+          position: absolute;
+          right: 0;
+          top: 4px;
+        }
+      }
+
+      .custom-checkbox {
+        margin-top: 12px;
+
+        .custom-control-input {
+          width: 20px;
+          height: 20px;
+        }
+
+        .custom-control-label {
+          span {
+            margin-left: 12px;
+          }
+
+          border-radius: 4px;
+
+          &::before {
+            width: 20px;
+            height: 20px;
+
+            border: 1px solid $neutral-200;
+            top: 1px;
+            background-color: $neutral-100;
+          }
+
+          &::after {
+            top: 1px;
+            width: 20px;
+            height: 20px;
+          }
+
+          &.checked {
+            outline: none;
+
+            &::before {
+              top: 1px;
+              background-color: $primary-500;
+            }
+
+            &::after {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+      }
+
+      a {
+        color: $primary;
+    
+        &:hover {
+          color: #4d00b3;
+          text-decoration: none;
+        }
+      }
+    
+      .login-link {
+        font-weight: 700;
+        white-space: nowrap;
+      }
+    }  
+  }
+}

@@ -1,0 +1,23 @@
+.modal {
+  .modal-dialog.review-modal {
+    .review-body {
+      padding: 32px 32px 0 !important;
+    }
+
+    .modal-footer {
+      .btn-cancel, .btn-submit {
+        & > span {
+          @include roboto-md();
+        }
+      }
+
+      .delete-review {
+        @include roboto-md($font-weight: 400);
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      max-width: 514px;
+    }
+  }
+}

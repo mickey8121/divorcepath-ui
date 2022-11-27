@@ -1,0 +1,137 @@
+.success-page {
+  .card {
+    .card-body {
+      .success-page-heading {
+        margin: -20px 0 0;
+        padding: 0 0 32px 0;
+        font-size: 24px;
+        line-height: 27px;
+        text-align: center;
+      }
+
+      .success-page-list {
+        margin: 0 -48px;
+        padding: 48px 48px;
+        border-top: 1px dashed $border-color-accent;
+        border-bottom: 1px dashed $border-color-accent;
+        list-style-type: none;
+
+        @include media-breakpoint-down(sm) {
+          margin: 0 -20px;
+          padding: 28px 20px;
+        }
+
+        .success-page-list-item {
+          display: flex;
+          justify-content: space-between;
+
+          &:not(:last-child) {
+            margin-bottom: 24px;
+          }
+
+          .success-page-label {
+            color: #828B95;
+          }
+          
+          .success-page-value {
+            font-weight: bold;
+          }
+
+          .success-page-status {
+            padding: 2px 24px;
+            border-radius: 8px;
+
+            &.trial {
+              background-color: #FAFC8F;
+              color: #5B5C1E;
+            }
+
+            &.success {
+              background-color: #D2FFE7;
+              color: #17B860;
+            }
+
+            &.error {
+              background-color: #FFD5D5;
+              color: #F31C1C;
+            }
+          }
+        }
+      }
+
+      .success-page-description {
+        margin: 0 -48px;
+        padding: 32px 48px;
+        border-bottom: 1px dashed $border-color-accent;
+        color: #828B95;
+
+        @include media-breakpoint-down(sm) {
+          margin: 0 -20px;
+          padding: 28px 20px;
+        }
+
+      }
+
+      .success-page-days {
+        margin: 32px 0 -16px 0;
+        display: block;
+      }
+
+      .btn {
+        margin: 30px 0 16px;
+        min-height: 56px;
+        font-weight: bold;
+
+        &.btn-outline-primary {
+          border-color: $btn-primary;
+          color: $btn-primary;
+      
+          &:hover:not(:disabled) {
+            background-color: $primary;
+            border-color: $btn-border-hover;
+            color: $white;
+          }
+      
+          &:active,
+          &:focus {
+            background-color: $btn-primary-hover !important;
+            border-color: $btn-border-hover !important;
+            box-shadow: $custom-box-shadow, 0 0 0 0 transparentize($primary, 0.5) !important;
+            color: $white;
+          }
+        }  
+      }
+
+      .success-page-guarantee {
+        color: #828B95;
+      }
+
+      .success-page-link {
+        font-weight: 500;
+
+        &.privacy {
+          margin-top: 16px;
+          display: block;
+        }
+      }
+    }
+
+    .success-page-error-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .success-page-error-message {
+        font-size: 18px;
+        color: #828B95;
+      }
+    }
+
+    .loading {
+      min-height: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

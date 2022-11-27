@@ -1,0 +1,12 @@
+node_modules
+settings-demo.json
+
+settings-production.json
+.vscode
+.DS_Store
+settings-local.json
+build/
+
+.env
+.env.local
+.env.dev

@@ -1,0 +1,54 @@
+@import 'clients';
+@import 'search-input';
+@import 'sidebar';
+@import 'calculations-card';
+@import 'biography';
+@import 'interview';
+@import 'new-client-form';
+@import 'create-interview-modal';
+@import 'merge-conflict-field';
+
+.home-page-content {
+  background-color: $secondary;
+  padding-top: 30px;
+  padding-bottom: 60px;
+
+  & > .container {
+    padding-left: 0;
+    padding-right: 0;
+
+    .alert.alert-warning {
+      .custom-button {
+        padding: 0;
+        font-size: 16px;
+        margin-top: -3px;
+      }
+    }
+  }
+
+  .card-header, .card-footer {
+    background-color: transparent;
+  }
+
+  .card-header {
+    border-bottom-color: $border-color;
+  }
+
+  .card-footer {
+    border-top-color: $border-color;
+  }
+
+  .card-body {
+    .list-group-item {
+      &:first-of-type {
+        border-top: 0;
+      }
+      
+      .custom-button {
+        i {
+          margin-right: 5px;
+        }
+      }
+    }
+  }
+}

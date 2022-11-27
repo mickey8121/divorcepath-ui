@@ -1,0 +1,47 @@
+@import 'footer';
+@import 'header';
+
+.page-content {
+  min-height: 100vh;
+  position: relative;
+
+  .main-section {
+    & > .slice {
+      position: relative;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: 30% -138px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        top: 0;
+        right: 0;
+        left: 0;
+        background-color: $gray-900;
+        opacity: 0.8;
+      }
+    }
+  }
+
+  .client-type {
+    padding: 2px 8px;
+    font-size: 12px;
+    line-height: 17px;
+    border-radius: 4px;
+    color: $white;
+
+    &.retained {
+      background-color: #34C342;
+    }
+
+    &.potential {
+      background-color: #FDB833;  
+    }
+
+    &.not-retained {
+      background-color: #EC2B2B;
+    }
+  }
+}

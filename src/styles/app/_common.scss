@@ -1,0 +1,51 @@
+.alert {
+  color: $black;
+  font-weight: 600;
+  margin: 10px 0 15px 24px;
+
+  @include media-breakpoint-down(md) {
+    margin: 10px 24px 15px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    margin: 10px 8px 15px;
+  }
+  
+  @include media-breakpoint-down(xs) {
+    margin: 15px;
+  }
+}
+
+.update-form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 6px;
+
+  .toggle-checkbox {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+}
+
+textarea {
+  height: auto;
+}
+
+.select__control {
+  height: 48px;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.child-support-type {
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+  font-weight:700;
+  font-family: 'DM Sans', sans-serif !important;
+}

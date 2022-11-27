@@ -1,0 +1,24 @@
+
+.modal .merge-conflict-field.modal-sm {
+  .modal-content {
+    .modal-body {
+      .merge-conflict-info {
+        .description {
+          margin-bottom: 0;
+        }
+
+        .field {
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin-bottom: 24px;
+          }
+
+          .title {
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

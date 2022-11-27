@@ -1,0 +1,182 @@
+.intake-info-container {
+  padding: 34px 24px 48px;
+
+  @include media-breakpoint-down(xs) {
+    padding: 24px 12px 32px;
+  }
+
+  & > .notification-card {
+    margin-left: 179px;
+
+    @include media-breakpoint-down(xs) {
+      margin-left: 0;
+    }
+  }
+
+  .intake-info-section {
+    display: flex;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    @include media-breakpoint-down(xs) {
+      flex-direction: column;
+    }
+
+    .left-title {
+      width: 156px;
+      min-width: 156px;
+      margin-right: 23px;
+      line-height: 16px;
+
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 16px;
+      }
+
+      span {
+        font-size: 14px;
+        color: $neutral-500;
+      }
+    }
+
+
+    .client-info-list.intake {
+      padding: 0;
+
+      .notification-card {
+        background-color: $neutral-100;
+
+        .body-container {
+          padding: 8px 12px !important;
+
+          .card-body p {
+            font-size: 14px;
+            line-height: 20px;
+            margin-bottom: 0;
+
+            @include media-breakpoint-down(xs) {
+              line-height: 18px;
+            }
+          }
+
+          .card-footer {
+            justify-content: space-between;
+          }
+        }
+      }
+
+      .client-info-list-item {
+        line-height: 16px;
+
+        &:not(:last-child) {
+          margin-bottom: 8px;
+
+          @include media-breakpoint-down(xs) {
+            margin-bottom: 4px;
+          }
+        }
+
+        .client-info-label {
+          font-size: 14px;
+          line-height: 16px;
+          color: $neutral-500;
+        }
+
+        .client-info-value {
+          font-size: 14px;
+          font-style: normal;
+          color: $neutral-black;
+          
+          &.bold {
+            font-weight: 600;
+          }
+        }
+
+        .add-intake-data-btn {
+          border: none;
+          outline: none;
+          background: none;
+          margin-left: 4px;
+          color: $link-500;
+          padding: 0;
+          line-height: 16px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  .dashed-divider {
+    width: 100%;
+    height: 1px;
+    margin-bottom: 32px;
+    background-image: linear-gradient(to right, white 60%, $neutral-300 0%);
+    background-position: bottom;
+    background-size: 15px 1px;
+    background-repeat: repeat-x;
+
+    @include media-breakpoint-down(xs) {
+      margin-bottom: 16px;
+    }
+  }
+
+  .edit-intake-btn {
+    padding: 0;
+    height: 24px;
+    margin-top: 18px;
+    font-weight: 400;
+  }
+  
+  .assign-intake-form {
+    width: 283px;
+    max-width: 283px;
+
+    @include media-breakpoint-down(xs) {
+      width: 100%;
+      max-width: none;
+    }
+
+    .custom-select-input {
+      .custom-select__control {
+        height: 40px;
+
+        .custom-select__value-container {
+          min-height: 38px;
+          height: 38px;
+          font-size: 14px;
+
+          &.custom-select__value-container--is-multi.custom-select__value-container--has-value {
+            flex-wrap: nowrap;
+            overflow: auto;
+            max-width: 100%;
+            width: 100%;
+            height: 100%;
+
+            &::-webkit-scrollbar {
+              display: none;
+            }
+
+            .custom-select__multi-value {
+              display: flex;
+              min-width: 100px;
+              max-width: calc(100% - 10px);
+            }
+          }
+        }
+      }
+
+      .custom-select__menu {
+        z-index: 100;
+      }
+    }
+
+    .custom-input {
+      & > input {
+        height: 40px;
+        padding-left: 12px;
+        font-size: 14px;
+      }
+    }
+  }
+}

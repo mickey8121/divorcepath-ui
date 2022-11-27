@@ -1,0 +1,155 @@
+.update-form-container {
+  &.intake {
+    .intake-header-container {
+      padding: 16px 24px;
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $neutral-200;
+
+      @include media-breakpoint-down(sm) {
+        padding: 12px;
+      }
+
+      .title {
+        margin-bottom: 0;
+      } 
+
+      .toggle-checkbox {
+        margin: 0 0 0 20px;
+      }
+    }
+    
+    .logo-form {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .logo-container {
+        padding: 10px 25px;
+        border-radius: 8px;
+        box-shadow: $shadow-sm;
+      }
+
+      .buttons {
+        margin: 20px 0 0 0 !important;
+        justify-content: center;
+        gap: 15px;
+      }
+    }
+
+    .color-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 15px;
+    }
+
+    .form-group {
+      .input-container {
+        position: relative;
+        cursor: text;
+
+        &::after {
+          content: 'www.divorcepath.com/intake/';
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+          left: 1.25rem;
+          color: #d6d6d6 !important;
+          z-index: 4;
+          font-size: 14px;
+
+          @include media-breakpoint-only(xs) {
+            content: '';
+          }
+        }
+      }
+
+      &.custom-input-form-urn {
+        display: flex;
+        flex-direction: column;
+
+        .form-control {
+          &.custom-input-form-urn-control {
+            position: relative;
+            padding-left: 207px;
+
+            @include media-breakpoint-only(xs) {
+              padding-left: 20px;
+            }
+          }
+        }
+
+        & > .d-flex {
+          align-items: center;
+
+          .form-control-label {
+            margin-bottom: 0 !important;
+          }          
+        }
+
+        .btn-copy {
+          padding: 6px;
+          margin-right: -6px;
+          align-self: flex-end;
+          background-color: transparent;
+          border: 0;
+          font-size: 12px;
+          line-height: 14px;
+          transition: color 0.2s ease;
+          color: $link-500;
+
+          &:focus {
+            outline: none;
+            color: $primary;
+          }
+
+          &:hover {
+            color: $primary;
+          }
+        }
+
+        .intake-description {
+          margin-top: 4px;
+        }
+
+        &.invalid {
+          .form-control {
+            border-color: $error;
+          }
+        }
+      }
+
+      .form-control {
+        font-size: 14px;
+        line-height: 16px;
+
+        &::placeholder {
+          color: #D6D6D6;
+        }
+      }
+
+      .form-control-label {
+        margin-bottom: 0.2rem;
+      }
+    }
+
+    textarea {
+      min-height: 88px;
+      max-height: 200px;
+      resize: vertical;
+
+      @include media-breakpoint-only(xs) {
+        min-height: 128px;
+      }
+    }
+
+    input[name="intakeSubmittedTitle"], 
+    textarea {
+      &::placeholder {
+        color: $gray-700 !important;
+      }
+    }
+  }
+}

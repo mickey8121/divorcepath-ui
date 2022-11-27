@@ -1,0 +1,88 @@
+.profile-header-container {
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+    border: 1px solid $border-color !important;
+    border-radius: 6px;
+    padding: 23px 24px 22px 29px;
+    background-color: $white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(xs) {
+        margin: 0;
+    }
+
+    .profile-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media screen and (max-width: 500px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .profile-description {
+            display: flex;
+
+            .avatar-selector {
+                overflow: hidden;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                min-width: 50px;
+                min-height: 50px;
+                margin-right: 24px;
+
+                img {
+                    width: 50px;
+                    height: 50px;
+                    min-width: 50px;
+                    min-height: 50px;
+                    background-color: $neutral-100;
+                }
+            }
+
+            .description-container {
+                margin-top: 2px;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                
+                @include media-breakpoint-down(xs) {
+                    justify-content: center;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    line-height: 16px;
+                    white-space: nowrap;
+                    @include text-truncate();
+
+                    @include media-breakpoint-down(xs) {
+                        max-width: 100px;
+                    }
+                }
+
+                .description {
+                    display: flex;
+                    font-size: 12px;
+                    line-height: 18px;
+                    color: $neutral-500;
+                    margin-top: 11px;
+                } 
+            }
+        }
+
+        .upgrade-btn {
+            @media screen and (max-width: 500px) {
+                margin-top: 15px;
+                width: 100%;
+
+                .profile-upgrade-btn a {
+                    width: 100%;
+                }    
+            }
+        }
+    }
+}
+  

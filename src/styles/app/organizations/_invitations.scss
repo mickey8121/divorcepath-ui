@@ -1,0 +1,33 @@
+.invitations-list {
+  .invitation {
+    padding: 12px 20px;
+    border-radius: 5px;
+    background-color: white;
+    
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border:1px solid rgba(0, 0, 0, 0.125);
+    
+    button {
+      height: 38px;
+    }
+
+    .invitation-info {
+      overflow: hidden;
+      line-height: 38px;
+
+      @include media-breakpoint-down(xs) {
+        margin-bottom: 15px
+      }
+
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap-reverse;
+
+      .invitation-email {
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}

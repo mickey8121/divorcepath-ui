@@ -1,0 +1,62 @@
+.free-plan-plug {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px 0 0 24px;
+  border: 1px solid $primary-300;
+  border-radius: 4px;
+  overflow: hidden;
+
+  .plug-content {
+    display: inline-flex;
+    flex-direction: column;
+    row-gap: 8px;
+    min-width: 203px;
+    min-height: 100%;
+    padding-bottom: 24px;
+    color: $neutral-black;
+
+    .plug-content-title {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    .plug-content-description {
+      font-size: 14px;
+      line-height: 18px;
+    }
+
+    .btn {
+      width: fit-content;
+      margin-top: auto;
+    }
+  }
+
+  .free-plan-plug-svg {
+    flex: 0 0 auto;
+    align-self: flex-end;
+    margin-left: -13px;
+
+    @include media-breakpoint-down(sm) {
+      flex-shrink: 1;
+      width: auto;
+      min-width: 81px;
+      height: 100%;
+    }
+  }
+}
+
+@media (max-width: 320px) {
+  .free-plan-plug {
+    padding: 12px;
+
+    .plug-content {
+      min-width: 0;
+      padding-bottom: 0;
+    }
+
+    .free-plan-plug-svg {
+      display: none;
+    }
+  }
+}

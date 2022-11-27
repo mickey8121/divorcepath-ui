@@ -1,0 +1,62 @@
+.profile-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: $white;
+    background-clip: border-box;
+    border: 1px solid $border-color;
+    border-radius: 0.25rem;
+
+    .profile-header-container {
+        box-shadow: none;
+        margin: 0;
+        border: 0 !important;
+        border-radius: 0;
+        border-bottom: 1px solid $border-color !important;
+    }
+
+    .profile-card-body {
+        .profile-bio-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 24px;
+            padding-right: 30px;
+
+            .row-description {
+                display: flex;
+                align-items: center;
+
+                .description-title {
+                    white-space: nowrap;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    margin: 0;
+                    display: block;
+                }
+        
+                .description-subtitle {
+                    font-size: 12px;
+                    line-height: 16px;
+                    color: $neutral-500;
+                    margin-left: 16px;
+                    white-space: nowrap;
+                }
+            }
+
+            .row-icon {
+                margin-top: 0 !important;
+            }
+        }
+
+        .biography-container {
+            padding: 8px 24px 40px;
+        }
+    }
+
+    @include media-breakpoint-up(xs) {
+        margin: 0 15px 16px;
+    }
+}

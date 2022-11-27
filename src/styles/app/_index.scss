@@ -1,0 +1,107 @@
+@import 'fonts';
+@import 'variables';
+@import 'mixins';
+@import 'common';
+@import 'pages';
+@import 'layout';
+@import 'calculations';
+@import 'join-to-firm';
+@import 'reports';
+@import 'organizations';
+@import 'tooltip';
+@import 'slider';
+@import 'plugs';
+
+@import 'custom-button';
+@import 'custom-filter-btn';
+@import 'custom-input';
+@import 'custom-date-picker';
+@import 'custom-select';
+@import 'custom-switch';
+@import 'avatar-selector';
+@import 'breadcrumb';
+@import 'loading';
+@import 'generate-pdf';
+@import 'progress';
+@import 'calculations-type-dropdown';
+@import 'alert';
+@import 'modal';
+@import 'toggle-checkbox';
+@import 'scroll';
+@import 'custom-badge';
+@import 'icon';
+@import 'notification';
+@import 'pagination';
+
+html {
+  @media screen {
+    background-color: $secondary;
+  }
+
+  height: 100%;
+
+  body {
+    background-color: unset;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+
+    #react-root {
+      height: 100%;
+    }
+  }
+
+  body:not(.modal-open) {
+    padding-right: 0 !important;
+  }
+
+  main {
+    padding-bottom: 60px;
+  }
+
+  .navbar-nav .nav-link img {
+    width: auto;
+    height: 14px;
+    margin-right: 0.5rem;
+    position: relative;
+    top: -1px;
+  }
+
+  .text-sm {
+    font-size: 0.875rem !important;
+  }
+
+  .card {
+    margin-bottom: 30px;
+  }
+
+  .text-limit {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .btn-icon-only {
+    width: 3rem;
+    height: 3rem;
+    line-height: 3rem;
+    padding: 0;
+
+    cursor: pointer;
+  }
+
+  .form-control-label {
+    color: #343a40;
+    font-size: 0.875rem;
+    font-weight: 700;
+  }
+
+  input[type="checkbox"]:focus {
+    box-shadow: none !important;
+    outline: none !important;
+  }
+
+  input[type="text"]:disabled {
+    background: $neutral-100;
+    color: $neutral-400;
+  }
+}

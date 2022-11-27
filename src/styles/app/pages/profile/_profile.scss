@@ -1,0 +1,121 @@
+.user-profile.pro-user-profile {
+  padding-top: 4rem;
+  padding-bottom: 7rem;
+  background-color: $secondary;
+  min-height: calc(100vh - 408px);
+
+  .update-form-container {
+    background-color: $white;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+    
+    &.settings-form {
+      padding: 0;
+    }
+
+    & > form > .page-inner-header .text-muted {
+      color: $gray-700 !important
+    }
+
+    .computed-date {
+      label {
+        margin-bottom: 0.2rem;
+      }
+  
+      p {
+        line-height: 16px;
+      }
+  
+      .form-text {
+        margin-top: 20px !important;
+      }
+    }
+  
+    .btn {
+      display: flex;
+      align-items: center;
+      
+      .btn-inner--text {
+        white-space: nowrap;
+      }
+    }
+
+    .select-input {
+      margin-bottom: 1rem;
+      .multi-select {
+        .pro-select__value-container {
+          height: unset;
+          min-height: 48px;
+        }
+      }
+    }
+
+    .support-type-input .custom-btn-group {
+      button {
+        padding: .75rem .75rem;
+
+        @media screen and (min-width: 1200px) {
+          padding: .75rem 1.45rem;
+        }
+      }
+    }
+
+
+    &.matter {
+      textarea.form-control {
+        height: initial;
+      }
+      
+      .client-type {
+        font-size: 14px;
+        line-height: 16px;
+      }
+      
+      .buttons {
+        @include media-breakpoint-only(xs) {
+          flex-direction: column;
+
+          .btn, .delimiter-top {
+            width: 100%;
+            justify-content: center;
+          }
+          
+
+          .btn-primary {
+            margin-bottom: 8px;
+          }
+        }
+      }
+
+      .client-info-list {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+    
+        .client-info-list-item {
+          display: flex;
+          gap: 20px;
+    
+          .client-info-label {
+            flex: 1;
+            color: $neutral-500;
+          }
+    
+          .client-info-value, .custom-input {
+            flex: 2;
+          }
+    
+          &:not(:last-child) {
+            margin-bottom: 16px;
+          }
+        }
+    
+        p {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

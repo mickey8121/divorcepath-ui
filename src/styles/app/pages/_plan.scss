@@ -1,0 +1,86 @@
+.plan-page {
+  position: relative;
+  min-height: calc(100vh - 198px);
+  width: 100%;
+  background-image: url(./../../../img/backgrounds/bg-park.webp);
+  background-size: 100%;
+  background-position: 30% -138px;
+  padding-top: 20px;
+  padding-bottom: 80px;
+
+  @include media-breakpoint-down(xs) {
+    min-height: calc(100vh - 233px);
+  }
+
+  &::after {
+    content: '';
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparentize($gray-900, $amount: 0.2);
+  }
+
+  .form-card-container {
+    padding: 20px 0;
+    height: 100%;
+    width: 100%;
+
+
+    .card {
+      border: 0;
+      border-radius: 6px;
+
+      .card-header {
+        border-radius: 0;
+      }
+    }
+
+    .auth-form {
+      position: relative;
+      z-index: 3;
+      max-width: 1280px;
+      margin-bottom: 60px;
+      margin-left: auto;
+      margin-right: auto;
+    
+      .password-container {
+        position: relative;
+      
+        a {
+          position: absolute;
+          right: 0;
+          top: 4px;
+        }
+      }
+    
+      .custom-control-label::before {
+        top: 7px;
+      }
+    
+      .custom-control-label::after {
+        top: 7px;
+      }
+    
+      a {
+        color: $primary;
+    
+        &:hover {
+          color: #4d00b3;
+          text-decoration: none;
+        }
+      }
+    
+      .login-link {
+        font-weight: 700;
+        white-space: nowrap;
+      }
+    }  
+  }
+
+  .plan-page-description {
+    padding: 24px 24px 0;
+  }
+}

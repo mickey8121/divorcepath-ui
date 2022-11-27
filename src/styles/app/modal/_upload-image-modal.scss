@@ -1,0 +1,35 @@
+.modal {
+  .modal-dialog.upload-image-modal {
+    max-width: 1200px;
+
+    position: relative;
+
+    .select-new-image-btn {
+      position: absolute;
+      bottom: -73px;
+      right: 32px;
+
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .cropper-box {
+      height: 600px;
+      width: 100%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      .modal-footer {
+        padding-top: 80px;
+      }
+
+      .select-new-image-btn {
+        position: absolute;
+        bottom: -53px;
+        right: 32px;
+      }
+
+    }
+
+  }
+}

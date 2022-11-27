@@ -1,0 +1,110 @@
+.current-plan {
+    background-color: $white;
+    border-radius: 8px;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(sm) {
+        margin-bottom: 30px;
+    }
+
+    @include media-breakpoint-down(xs) {
+        margin-top: 30px;
+    }
+
+    .current-plan-row {
+        padding: 16px 54px 16px 24px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        cursor: pointer;
+
+        @include media-breakpoint-down(sm) {
+            padding: 15px 14px 15px 18px;
+        }
+
+        .plan-desc-list {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            margin-right: 20px;
+
+            @include media-breakpoint-down(xs) {
+                justify-content: space-around;
+                align-items: flex-start;
+            }
+
+            .plan-description {
+                display: flex;
+                flex-direction: column;
+    
+                @include media-breakpoint-down(sm) {
+                    &:nth-child(3) {
+                        display: none;
+                    }
+                }
+    
+                @include media-breakpoint-down(xs) {
+                    &:nth-child(2), &:nth-child(5)  {
+                        display: none;
+                    }
+                }
+    
+                .label {
+                    font-size: 12px;
+                    line-height: 14px;
+                    margin-bottom: 8px;
+                    white-space: nowrap;
+                }
+    
+                .description {
+                    font-size: 16px;
+                    font-weight: 700;
+                    line-height: 19px;
+    
+                    @media screen and (max-width: 400px) {
+                        max-width: 150px;
+                    }
+                }
+            }
+        }
+
+        .row-icon {
+            width: 15px;
+            margin-right: -20px;
+
+            @include media-breakpoint-down(sm) {
+                margin-right: 0px;
+            }
+        }
+    }
+
+    .current-plan-content {
+        border-top: 1px dashed $neutral-300;
+        padding: 24px 16px;
+
+        .privacy-link, .refund-link {
+            font-size: 12px;
+            font-weight: 500;
+            line-height: 14px;
+            text-decoration: underline;
+            color: $primary;
+        }
+
+        .title {
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 354px;
+            color: #828B95;
+            margin-bottom: 24px;
+        }
+
+        .subtitle {
+            font-size: 12px;
+            line-height: 18px;
+            color: #828B95;
+            max-width: 354px;
+            margin-bottom: 16px;
+        }
+    }
+}

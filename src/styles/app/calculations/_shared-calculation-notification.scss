@@ -1,0 +1,80 @@
+.shared-calculation-notification {
+  background-color: $neutral;
+  border: 1px solid $primary-500;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 1rem;
+
+  .header {
+    cursor: pointer;
+    align-items: center;
+    justify-content: space-between;
+
+    .header-title {
+      display: flex;
+      align-items: center;
+
+      @include media-breakpoint-down(xs) {
+        align-items: flex-start;
+      }
+
+      .calc-icon {
+        margin-right: 12px;
+        min-width: 20px;
+      }
+    }
+
+    .shared-calculation-notification-text {
+      color: $neutral-800;
+      font-weight: 500;
+    }
+  }
+
+  .header-shared {
+    display: flex;
+    align-items: center;
+    padding: 16px 20px;
+    color: $neutral-800;
+    font-weight: 500;
+
+    .calc-icon { 
+      margin-right: 12px;
+    }
+  }
+
+  .shared-calculation-info {
+    .client-info {
+      .client-label {
+        margin-right: 8px;
+        font-weight: 400;
+      }
+
+      .shared-clients {
+        font-weight: 600;
+      }
+
+      .client-text-info {
+        font-weight: 400;
+        line-height: 21px;
+        color: $neutral-black;
+      }
+    }
+
+    .button-form-group {
+      .delete-shared-calculation {
+        margin-left: auto;
+        font-weight: 400;
+      }
+
+      .save-shared-calculation {
+          margin-right: 24px;
+          font-weight: 400;
+      }
+    }
+  }
+
+  .calc-icon,
+  .collapse-icon {
+    color: $primary-500;
+  }
+}

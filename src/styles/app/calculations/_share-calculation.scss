@@ -1,0 +1,84 @@
+.share-calculation {
+  padding-top: 0;
+  margin-bottom: 24px;
+
+  .share-calculation-row {
+    padding-top: 24px;
+    padding-bottom: 0;
+    border-top: 1px solid $neutral-200;
+
+    .share-calculation-form {
+      .form-row {
+        .custom-input {
+          flex: 1;
+        }
+
+        .btn {
+          margin-left: 18px;
+        }
+      }
+
+      .description {
+        padding-top: 16px;
+      }
+
+      .shared-with {
+        .title {
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 16px;
+        }
+
+        .close-btn {
+          :hover {
+            cursor: pointer;
+          }
+        }
+
+        .shared-with-header {
+          border-bottom: 1px solid $neutral-200;
+
+          small {
+            display: inline-block;
+            font-size: 12px;
+            line-height: 14px;
+            margin-bottom: 6px;
+          }
+        }
+
+        .shared-with-row {
+          display: flex;
+          align-items: center;
+
+          p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16px;
+            padding: 5px 0;
+            color: $neutral-600 !important;
+          }
+        }
+
+        .remove-email {
+          display: flex;
+          align-items: center;
+
+          svg path {
+            transition: stroke 0.15s ease-in-out;
+            stroke: $neutral-300;
+          }
+
+          &:hover {
+            svg path {
+              stroke: $neutral-black;
+            }
+          }
+        }
+
+        .not-shared {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}

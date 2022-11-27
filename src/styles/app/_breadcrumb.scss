@@ -1,0 +1,22 @@
+.custom-breadcrumb {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 0;
+  margin-top: 16px;
+  margin-bottom: 0;
+  background-color: transparent;
+  border: 0;
+
+  .breadcrumb-item {
+    &::before {
+      color: white;
+      font-size: 12px;
+    }
+
+    a, span {
+      color: white;
+      font-size: 12px;
+      white-space: nowrap;
+    }
+  }
+}

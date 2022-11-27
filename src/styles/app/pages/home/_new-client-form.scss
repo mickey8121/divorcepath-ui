@@ -1,0 +1,11 @@
+.add-client-form {
+    textarea {
+        height: 50px !important;
+        transition: height 0.1s ease-in-out;
+        resize: none;
+
+        &:focus {
+            height: 100px !important;
+        }
+    }
+}

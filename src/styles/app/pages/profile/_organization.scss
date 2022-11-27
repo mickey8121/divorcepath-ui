@@ -1,0 +1,50 @@
+.organization-info-container {
+  & + .divider {
+    margin: 32px 0;
+  }
+
+  .organization-info {
+    display: flex;
+
+    img {
+      min-width: 96px;
+      height: auto;
+      width: 96px;
+      margin-right: 24px;
+    }
+
+    .org-logo-placeholder {
+      width: 96px;
+      height: 96px;
+      background-color: $primary-500;
+      border-radius: 4px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 24px;
+
+      span {
+        font-family: 'DM Sans', sans-serif;
+        font-size: 54px;
+        line-height: 70px;
+        color: $white;
+        text-transform: uppercase;
+      }
+    }
+
+    .organization-description {
+      h5 {
+        font-size: 16px;
+        font-weight: 700;
+        line-height: 21px;
+        margin-bottom: 8px;
+      }
+
+      .description {
+        margin-bottom: 0;
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}

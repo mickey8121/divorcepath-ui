@@ -1,0 +1,11 @@
+.scroll-link {
+  &.blue {
+    color: $blue;
+  }
+
+  &.underline {
+    &:hover {
+      text-decoration: underline !important;
+    }
+  }
+}

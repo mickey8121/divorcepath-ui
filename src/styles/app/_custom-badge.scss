@@ -1,0 +1,17 @@
+.custom-badge {
+  padding: 2px 4px;
+  border-radius: 4px;
+  font-weight: 400;
+  line-height: 16px;
+  size: 12px;
+
+  &.shared-by-you {
+    background-color: $primary-200;
+    color: $primary-500;
+  }
+
+  &.shared-with-you {
+    background-color: $link-200;
+    color: $link-500;
+  }
+}

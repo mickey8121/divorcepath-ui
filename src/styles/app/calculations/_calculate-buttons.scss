@@ -1,0 +1,34 @@
+.calculate-buttons {
+  height: 50px;
+  z-index: 100;
+
+  @media (max-width: 768px) {
+    &.sidebar {
+      position: fixed;
+      bottom: 23px;
+      left: 20px;
+      z-index: 2000;
+      filter: drop-shadow(5px 5px 4px #808080);
+    }
+  }
+
+  .preloader-btn {
+    display: none !important;
+
+    &.open {
+      display: flex !important;
+    }
+  }
+
+  .btn:not(.preloader-btn) {
+    display: none !important;
+
+    &.open {
+      display: block !important;
+    }
+  }
+
+  .btn:not(.preloader-btn).share-calculation {
+    display: flex !important;
+  }
+}

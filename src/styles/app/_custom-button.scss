@@ -1,0 +1,111 @@
+.btn.custom-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem 1.75rem;
+  box-shadow: none !important;
+  appearance: none;
+  font-weight: 600;
+
+  &.btn-primary {
+    @include btn-primary();
+  }
+
+  &.btn-white {
+    @include btn-white();
+  }
+
+  &.btn-secondary {
+    @include btn-secondary();
+  }
+
+  &.btn-stroke {
+    @include btn-stroke();
+  }
+
+  &.btn-link {
+    @include btn-link();
+  }
+
+  &.btn-white-link {
+    @include btn-white-link();
+  }
+
+  &.btn-red-link {
+    @include btn-red-link();
+  }
+
+  &.btn-dashed-link {
+    @include btn-dashed-link();
+  }
+
+  &.btn-primary,
+  &.btn-secondary,
+  &.btn-white,
+  &.btn-stroke {
+    &:disabled {
+      background-color: $neutral-200;
+      border-color: $neutral-200;
+      color: $neutral-500;
+    }
+  }
+
+  &.btn-link:disabled,
+  &.btn-white-link:disabled,
+  &.btn-red-link:disabled {
+    background-color: transparent;
+    border-color: transparent;
+    color: $neutral-500;
+  }
+
+  &.btn-lg {
+    @include btn-size-lg();
+  }
+
+  &.btn-md {
+    @include btn-size-md();
+  }
+
+  &.btn-sm {
+    @include btn-size-sm();
+  }
+}
+
+.custom-btn-group {
+  display: block;
+
+  .btn.custom-button {
+    display: inline-block !important;
+
+    &.btn-primary {
+      background-color: $secondary;
+      border-color: $secondary;
+      color: $neutral-black;
+
+      &:hover:not(:disabled),
+      &.active:not(:disabled),
+      &:focus:not(:disabled),
+      &:active:not(:disabled) {
+        background-color: $btn-secondary-focus;
+        border-color: $btn-secondary-focus;
+      }
+    }
+
+    &.active {
+      z-index: 0;
+    }
+  }
+
+  & + .invalid-feedback {
+    display: block;
+    width: 100%;
+    margin-top: 0px;
+    color: $error;
+    font-size: 80%;
+    transition: margin-top 0.1s ease-in-out, opacity 0.1s ease-in-out;
+
+    &.show {
+      margin-top: 0.25rem;
+    }
+  }
+}

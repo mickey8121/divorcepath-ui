@@ -1,0 +1,72 @@
+
+.modal .create-interview.modal-md {
+  .modal-content {
+    .modal-header .modal-description {
+      margin-top: 24px;
+      line-height: 21px;
+      margin-bottom: 0;
+    }
+  
+    .modal-body .create-interview-form {
+      .custom-input {
+        & > input {
+          height: 42px;
+          padding: 11px 10px 10px 12px;
+        }
+      }
+
+      .custom-select-input {
+        .custom-select__control {
+          height: 42px;
+
+          .custom-select__value-container {
+            height: 40px;
+            min-height: 40px;
+          }
+
+          .custom-select__indicators .custom-select__indicator-separator {
+            display: none;
+          }
+        }
+      }
+
+      .custom-checkbox {
+        display: flex;
+        align-items: center;
+        margin-top: 24px;
+
+        .custom-control-input:focus ~ .custom-control-label::before {
+          box-shadow: none;
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+          background-color: $primary;
+        }
+
+        label.custom-control-label {
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: $neutral-800;
+
+          span {
+            padding-left: 6px;
+          }
+
+          &::after, &::before {
+            top: -2px;
+            width: 20px;
+            height: 20px;
+          }
+
+          &::after {
+            width: 20px;
+            height: 20px;
+            background-image: url('data:image/svg+xml;utf8,<svg width="12" height="10" viewBox="0 0 12 10" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M1 5.95246L3.85714 8.8096L11 1.66675" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>');
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+}
